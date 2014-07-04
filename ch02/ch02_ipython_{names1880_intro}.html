@@ -1,0 +1,751 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="qrichtext" content="1" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'Consolas'; font-size:8pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Python 2.7.6 |Anaconda 1.9.2 (64-bit)| (default, Nov 11 2013, 10:49:15) [MSC v.1500 64 bit (AMD64)]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">IPython 1.1.0 -- An enhanced Interactive Python.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">?         -&gt; Introduction and overview of IPython's features.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%quickref -&gt; Quick reference.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">help      -&gt; Python's own help system.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">object?   -&gt; Details about 'object', use 'object??' for extra details.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%guiref   -&gt; A brief reference about the graphical user interface.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">1</span><span style=" color:#000080;">]:</span> !ls</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">ch02_ipython_{MovieLens}.html</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">ch02_ipython_{usa.gov data}.html</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">movielens</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">names</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">usagov_bitly_data2012-03-16-1331923249.txt</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">2</span><span style=" color:#000080;">]:</span> !head -n 10 names/yob1880.txt</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Mary,F,7065</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Anna,F,2604</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Emma,F,2003</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Elizabeth,F,1939</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Minnie,F,1746</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Margaret,F,1578</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ida,F,1472</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Alice,F,1414</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Bertha,F,1320</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Sarah,F,1288</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">3</span><span style=" color:#000080;">]:</span> import pandas as pd</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">4</span><span style=" color:#000080;">]:</span> names1880 = pd.read_csv('names/yob1880.txt', names=['name', 'sex', 'births'])</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">5</span><span style=" color:#000080;">]:</span> names1880</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">5</span><span style=" color:#8b0000;">]:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">         name sex  births</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">0        Mary   F    7065</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1        Anna   F    2604</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2        Emma   F    2003</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3   Elizabeth   F    1939</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4      Minnie   F    1746</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">5    Margaret   F    1578</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">6         Ida   F    1472</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">7       Alice   F    1414</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">8      Bertha   F    1320</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">9       Sarah   F    1288</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">10      Annie   F    1258</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">11      Clara   F    1226</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">12       Ella   F    1156</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">13   Florence   F    1063</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">14       Cora   F    1045</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">15     Martha   F    1040</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16      Laura   F    1012</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">17     Nellie   F     995</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">18      Grace   F     982</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">19     Carrie   F     949</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">20      Maude   F     858</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">21      Mabel   F     808</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">22     Bessie   F     794</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">23     Jennie   F     793</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">24   Gertrude   F     787</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">25      Julia   F     783</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">26     Hattie   F     769</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">27      Edith   F     768</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">28     Mattie   F     704</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">29       Rose   F     700</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">30  Catherine   F     688</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">31    Lillian   F     672</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">32        Ada   F     652</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">33     Lillie   F     647</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">34      Helen   F     636</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">35     Jessie   F     635</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">36     Louise   F     635</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">37      Ethel   F     633</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">38       Lula   F     621</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">39     Myrtle   F     615</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">40        Eva   F     614</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">41    Frances   F     605</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">42       Lena   F     603</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">43       Lucy   F     591</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">44       Edna   F     588</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">45     Maggie   F     582</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">46      Pearl   F     569</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">47      Daisy   F     564</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">48     Fannie   F     560</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">49  Josephine   F     544</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">50       Dora   F     524</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">51       Rosa   F     507</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">52  Katherine   F     502</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">53      Agnes   F     473</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">54      Marie   F     471</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">55       Nora   F     471</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">56        May   F     462</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">57      Mamie   F     436</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">58    Blanche   F     427</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">59     Stella   F     414</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">          ... ...     ...</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">[2000 rows x 3 columns]</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">6</span><span style=" color:#000080;">]:</span> names1880.info()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;class 'pandas.core.frame.DataFrame'&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Int64Index: 2000 entries, 0 to 1999</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Data columns (total 3 columns):</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">name      2000 non-null object</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">sex       2000 non-null object</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">births    2000 non-null int64</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dtypes: int64(1), object(2)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">7</span><span style=" color:#000080;">]:</span> names1880.groupby('sex').births.sum()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">7</span><span style=" color:#8b0000;">]:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">sex</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">F       90993</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">M      110493</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Name: births, dtype: int64</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">8</span><span style=" color:#000080;">]:</span> years = range(1880, 2011)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">9</span><span style=" color:#000080;">]:</span> pieces = []</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">10</span><span style=" color:#000080;">]:</span> columns = ['name', 'sex', 'births']</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">11</span><span style=" color:#000080;">]:</span> for year in years:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     path = 'names/yob{}.txt'.format(year)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     frame = pd.read_csv(path, names=columns)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">12</span><span style=" color:#000080;">]:</span>     frame['year'] = year</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">13</span><span style=" color:#000080;">]:</span> for year in years:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     path = 'names/yob{}.txt'.format(year)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     frame = pd.read_csv(path, names=columns)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     frame['year'] = year</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     pieces.append(Frame)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">---------------------------------------------------------------------------</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">NameError</span>                                 Traceback (most recent call last)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#006400;">&lt;ipython-input-13-2cb85d797080&gt;</span> in <span style=" color:#4682b4;">&lt;module&gt;</span><span style=" color:#00008b;">()</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#006400;">      3</span>     frame <span style=" color:#a52a2a;">=</span> pd<span style=" color:#a52a2a;">.</span>read_csv<span style=" color:#a52a2a;">(</span>path<span style=" color:#a52a2a;">,</span> names<span style=" color:#a52a2a;">=</span>columns<span style=" color:#a52a2a;">)</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#006400;">      4</span>     frame<span style=" color:#a52a2a;">[</span><span style=" color:#00008b;">'year'</span><span style=" color:#a52a2a;">]</span> <span style=" color:#a52a2a;">=</span> year</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#006400;">----&gt; 5</span><span style=" color:#a52a2a;">     </span>pieces<span style=" color:#a52a2a;">.</span>append<span style=" color:#a52a2a;">(</span>Frame<span style=" color:#a52a2a;">)</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#006400;">      6</span> </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">NameError</span>: name 'Frame' is not defined</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">14</span><span style=" color:#000080;">]:</span> for year in years:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     path = 'names/yob{}.txt'.format(year)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     frame = pd.read_csv(path, names=columns)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     frame['year'] = year</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     pieces.append(frame)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">15</span><span style=" color:#000080;">]:</span> names = pd.concat(pieces, ignore_index=True)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">16</span><span style=" color:#000080;">]:</span> names.info()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;class 'pandas.core.frame.DataFrame'&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Int64Index: 1690784 entries, 0 to 1690783</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Data columns (total 4 columns):</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">name      1690784 non-null object</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">sex       1690784 non-null object</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">births    1690784 non-null int64</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">year      1690784 non-null int64</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dtypes: int64(2), object(2)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">17</span><span style=" color:#000080;">]:</span> total_births = names.pivot_table('births', rows='year', cols='sex', aggfunc=sum)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">18</span><span style=" color:#000080;">]:</span> total_births.tail()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">18</span><span style=" color:#8b0000;">]:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">sex         F        M</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">year                  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2006  1896468  2050234</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2007  1916888  2069242</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2008  1883645  2032310</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2009  1827643  1973359</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2010  1759010  1898382</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">[5 rows x 2 columns]</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">19</span><span style=" color:#000080;">]:</span> total_births.plot(title='Total births by sex and year')</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">19</span><span style=" color:#8b0000;">]:</span> &lt;matplotlib.axes.AxesSubplot at 0x15d8c828&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAZgAAAEZCAYAAACq1zMoAAAABHNCSVQICAgI
+fAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAIABJREFUeJzs3XdUFFcbBvBn
+KdYgTaVKXYqKio0SG6LYYlcEY0Oxa2JLYoz6GXtPLFFjFEVFxRprsMQIGhUR
+7KCC9KqyFJHO7vv9MXF1pcPC7uL9nZMTduozK87r3HtnhkdEBIZhGIaRMiVZ
+B2AYhmHqJlZgGIZhmBrBCgzDMAxTI1iBYRiGYWoEKzAMwzBMjWAFhmEYhqkR
+rMAwckVJSQlRUVElznNycoKXl1eJ8+Li4qCmpobKjrova38VFRMTAyUlJYhE
+omptRxF5eHhg6dKlso7ByClWYJgK+eKLL6CmpgY1NTUoKSmhUaNG4s9Hjx4t
+cR1/f3+0aNFCahl4PB54PF6J84yMjJCVlVXqfKDsAsVUTVl/JgyjIusAjGJ4
+9+6d+GdTU1N4eXnB2dlZhokqjohAROxEWENkfa+2UCiEsrKyTDMwJWNXMEy1
+5OfnY+7cuTAwMICBgQHmzZuHgoICZGdno3///khKSoKamhqaNGmClJQUBAUF
+wdHREZqamtDX18c333yDwsLCCu/v5cuXsLe3h7q6OoYOHYr09HQAxZupnJyc
+sGTJEnTt2hWNGzfG+PHjcfPmTcyePRtqamr49ttvxdu8evUqLC0toampidmz
+Z0vsq0ePHtDQ0ECzZs3g7u5eZjYvLy8YGBhAX18fmzdvBgCkpKSgcePGSEtL
+Ey93//59NG/eHEKhsNg2goKC0KlTJ6irq0NXVxcLFiwQzwsMDMSXX34JTU1N
+2NraIiAgAABw+/ZtNGvWDAkJCQCAR48eQUtLC+Hh4SXmnDNnDoyMjKCuro5O
+nTrh33//Fc/7+eefMWrUKEyYMAFNmjSBjY0NQkJCxPMfPHiADh06oEmTJnB3
+d0deXl6J+ygoKIC2tjaePn0qnvb69Ws0btwYAoEAAHDhwgXY2tpCU1MTXbp0
+wZMnT8TLrlu3Dnw+H02aNEHr1q1x5swZ8Txvb2906dIF8+fPR9OmTbF8+fIS
+MzBygBimkkxMTOjatWtERLR06VJydHSkN2/e0Js3b+jLL7+kpUuXEhGRv78/
+GRoaSqwbEhJCd+/eJaFQSDExMdSyZUvasmWLeD6Px6PIyMgS99ujRw8yMDCg
+0NBQys7OphEjRtDYsWOJiCg6Opp4PB4JhULxssbGxhQWFkZCoZAKCwvJycmJ
+vLy8JLbJ4/Fo0KBBlJmZSXFxcdSsWTO6fPkyERG5u7vTmjVriIgoPz+fbt26
+VWKu9/v++uuvKScnh548eULNmjWjv//+m4iIBgwYQLt27RIvP3fuXPr2229L
+3JaDgwP5+PgQEVF2djYFBgYSEVFCQgJpa2uTn58fERFdvXqVtLW1KTU1lYiI
+Fi9eTM7OzpSTk0M2Nja0Y8eOErdPROTj40NpaWkkFApp8+bNpKurS/n5+URE
+tGzZMmrQoAH5+fmRSCSiRYsWkYODg/g7MDIyoi1btlBRURGdPHmSVFVVxX/e
+n5o5cyYtXLhQ/HnLli00ePBgIiK6f/8+NW/enIKCgkgkEtGBAwfIxMSECgoK
+iIjoxIkTlJycTEREx44do8aNG1NKSgoREe3fv59UVFTot99+I6FQSLm5uaUe
+KyNbrMAwlfZxgTE3Nxef9IiILl++TCYmJkREdP369WIF5lO//vorDRs2TPy5
+rALj5OREixYtEn8OCwujevXqkUgkKlZgnJycaNmyZcXW37t3r8Q0Ho8nUThG
+jRpF69evJyKi8ePH09SpUykhIaHMY3i/7xcvXoin/fDDD+Tp6UlERL6+vtSl
+SxciIioqKiJdXV26d+9eidvq3r07LVu2jN68eSMxfd26dTRu3DiJaX379qUD
+Bw4QEVFhYSF17NiRbGxsqH///mXm/ZSmpiY9fvyYiLgC4+LiIp4XGhpKDRs2
+JCKigIAA0tfXl1j3439QfCowMJCMjIzEnzt27EgnTpwgIqLp06cXW8/KyooC
+AgJK3JatrS2dPXuWiLgC8/F2GfnFmsiYaklKSoKxsbH4s5GREZKSkkpdPjw8
+HAMHDoSenh7U1dWxePFicZNJRXw8aMDIyAiFhYVITU0td9n3SuqH0dXVFf/c
+qFEjZGVlAQA2bNgAIoKdnR1sbGywf//+SmV7/z0MGTIEYWFhiImJwdWrV8VN
+UyXx8vJCeHg4WrZsCTs7O1y8eBEAEBsbixMnTkBTU1P8361bt5CSkgIAUFFR
+wYQJExAaGirRrFaSTZs2oVWrVtDQ0ICmpiYyMzMlvkMdHR2J7yMvLw8ikQhJ
+SUkwMDCQ2JaxsXGpfTD29vZo2LAh/P398fz5c0RGRmLw4MHi49m8ebPE8SQk
+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
+F7h/X3K5cW3HISo9qsr7qXVSK1VyprRDk+dDfn8FQ0QUGRlJISEhREQKeQXD
++mDK9+zNM9LZqCPxDKrly4nGjKn+tsvLHxFBZGjIDY0eeXxk9XcoRdL47g8/
+Pkwdd3ckoUgoMb1fP6JZs4j09Ih++63i2ysSFtG1qGs05dwU0l6vTeZbzSk2
+o/jfR6Kq5f/1V6IhQySnnThBZGJClJdX6c1VizTPKawPRk5pMjwFAAAgAElE
+QVSZmZlJfK6tx/Ewtefw48MY23as+BlUO3cCe/YAtXGPp7k5kJ0NGKt2QnDS
+4prfYS3KKczBj3//iCMjjkj0nQQFAaGhwJkzwIIFQP/+QH4+MH9++dtUVlKG
+s6kznE2d8duA3wCgxGeHVUV2NrB+PXDpkuT0kSMBLy/gwAFg6lSp7Kr2Sa1U
+yZnSDq2uHXJdO57PSdtdbelm7E0iItq0icjUlCgqqvb27+JCdOaskDTWaVDS
+26QKrSMSiWjtzbUlPvlXHuQU5FA/n37kccaj2LwBA4h27PjwOTaWSF+f6M8/
+azFgCTZuJBpZykXkjRtEZmYV7zeSBmmeU1gfDMPIQExGDJKzkuFo6IjHj4FN
+m4AbNwBT09rL0LkzEBKshIGWA3Hq2akKrfNv3L9YdG0RbsTeKH/hWpBflI/t
+d7fjSuQVvHr3Cl8d+QqaDTTxx8A/JJYLDuaeOO3p+WGakRHX3zFlCnDvXi0H
+/09KCrBxI/DzzyXP79YNMDAAjh+v1VhSwwoMUyPYs8jKdv7FeXxl+RWUlZSx
+Zg3XZPPR2ymqrSL5O3fmTqzurd3h+9S3Qtv1euAFI3UjXAivQC95FVXmu99w
+awMOPDqAVTdWwWiLEcw1zXFo2CGoKqtKLLdxI/Ddd0D9+pLrd+oE/PEHMHw4
+8EZKb1EuL39hIfdahdGjgZYtuQEdrVuXvvzixcCaNYBIJJ18tYkVGIapAUN9
+hyIjL6PU+efCz2Gw5WCEh3N37U+bVuqiNaZzZ+5f9r3NXPA89TniMuPKXP5t
+/luceX4Gewftxfnw8zJ/usTLtJfYencrTrudxo2JN5D9Uzb2DN4DZSVlieWS
+k4ErV4CJE0vezrBhwNixwJgxgFBYc3mzs7m+FD097l4XR0cgOrr0q5f3+vTh
+CuNfCvisS1ZgmBrx8XtVFFF18qfnpuPsi7M4GXayxPmZeZm4m3AXfcz7YP16
+7sVhn7xmqdoqkt/AAFBVBZIT6mF4y+E49vRYmcsfe3oMzqbO6G3WGwXCArwQ
+vJBSWkmfZo9Kj8L+B/slChoRYdZfs/Bj1x9hpG4EAFBRKnnM0h9/AO7ugLp6
+6ftcuZK7yXHVquplj4sD/Pyc8N87GMWKioBRo7gic/8+N+Dg228BDY3yt8nj
+cb8jf/xR/rLyhhUYhpGyqPQoKPOUcejxoRLnX3p5Cd2Nu0OQ0hhnzgDffFPL
+AT/yvplstM1o+IaW3Uzm9cALk9pPAo/Hw1cWX+Fi+MUaz3cn/g667OuC9bfW
+4+vTXyOnMAcZeRlYen0pkrOSMcd+TpnrFxZyJ+ZZs8rej4oK4OvLjdr69deq
+ZSXirlACAwEbG+CXX4CXL7kM06dz8729ub6fynJ1BW7eBBTt5b2swDA14nPu
+g4nOiEZffl+Evg5FbEasxDwRiXDk6REMthoMb2+uWUZLq+TtVEdF878vMN2N
+uyMpKwnhgvASlwt9HYr4t/Hox+8HgHtsyYWImumH8ff3R3R6NLYEbsEQ3yHw
+GuyFB9MeQJmnjPa728NsqxliMmJw2u10sb6WT505A1hYcCf88ujqcifxvXuB
+OXMq31x25AjXab90qT9u3gTu3AFcXIDGjYHHj7mOetWy45bqiy+4IvPfq7MU
+xmdXYDQ1NcWvea4L/2lq1s1nSCmyqPQoWGtbw7WVKw4/OSye/jr7NQYcHgBB
+jgCjWo/Cn39yJw1Zel9glJWU4d7aHb8F/Vbicmv+XYMZnWaIm6GcTZ0RkhRS
+Zj9TVWTmZWLimYlw9HLEvaR7uDruKgZYDEBD1YY4NOwQNrlswqPpj+Az3Ad8
+LX6Z2yICtm0r/+rlY8bG3HPanjwBxo3jmrYq4s0bbqDG3r3c1ZC1NXDiBNfH
+8vYtcPs2VySqY/Jk7gpLoTr7pTbgWc7U4UNj5Ny089PJzH07XXx8i6x/syaR
+SERnnp0hg80G9NPfP1GhsJCio4maNSMqqp234JYqNZWoSRMioZDoTfYb0tuk
+RwExARLLPEx+SDobdYo9Efirw1+R7xNfqebZfHszuR53rfZzvYiIjhwhsrEh
+KuF9hOXKyeHuExozpvQ/I5GI6Nw57tlxZmZE331XvbzlEYmI2rQh+u9hHzVG
+mufOz+4KhmFq2ovXUYgKMUPMTUcUCAvQw7sHfvj7B/gM98HqXquhoqSCs2eB
+QYMAZeXyt1eTtLW54dGBgUDTRk3x+8Df4XHGA+8K3omXWfzPYizqughq9SVH
+InQ37o7AhECpZRGKhNgetB3zHedX+8kVqancs9b27q1as1TDhlzzWnIyMHQo
+4OMDhIdzV0UA9/9Fi4AffgDMzLjmr/XrqxW5XDwedxWzd2/N7keaWIGRU59z
+H4Y8qE7+SEE0VLJMcfgwD8t6LEMf8z54PP0xnEycxMucOcOduGpKZfKPGQMc
++m88wmCrwehh0gOTz01GSFIIrkdfx9PXTzG903QAXJPRnDlATg7QTqcdHr16
+JLXM58PPQ6exDvJe5lV7W/PmcfeZ2NtXfRuNGgHnzgFOTtz/e/UCHByAkye5
+5rArV4B//+V+7tgRUPrvbFqTv/vjxwM//lhjm5c69iwyhpEioUiIlNw49HMw
+QdBtoKvaeJi1k1wmNZUbqtq7t2wyfmrsWKB9e2DLFu5+iy19t+CHqz/A46wH
+wt6EYf+Q/aivwt2hePYs16/Rsydg36stHr16BCKSyrPytt7dyo0KE1RvO15e
+3In/6dNqR0LjxlwBAbi+j3PngA0buKuia9eA2u4C1dCo2NBmecH7r82tzuHx
+eDK/EYz5/MRnxqP1FnvMyElCbi7QrBmwdKnkMt7ewPnzwKmKPZ2lVvTsyQ2X
+/vTtEHlFeaivXF9cQLp14zqxjYwAb2+CziYd3J92H4ZNqvcYgkcpj/DVka8Q
+PSe63JFhn4qO5m5erF8fWL4cOHiQuynR2rpakT5b0jx3sisYhpGi6IxoNMo3
+g5kZd1UwbhywZAmQmcmd9CIjgWPHgIULZZ1U0vjx3In50wLTQKWB+OfgYCA2
+FggI4B6xUlTEQzvddniU8qjaBWbfg32Y3GFypYvL0aPcvSdCIVdktLS44cE6
+OtWKw0gJ64ORU59zH4Y8qGr+qPQoIMMUZmbcEGAi4OuvuY7gEyeAvDzu8fDu
+7tLN+6nK5h8xgntNQGpq6cts3cpd5Ziacsdz44Z0+mFEJMKJsBNwt+G+lIpm
+j47m+oNu3AAEAu77DQiQfXFR9N99aWIFhmGkKDo9GnlJ3BUMj8e9V93EhLuv
+4s8/gdWrgUmTqn7DXU1p0gT46iuu+a4kSUncWyAnT+Y+DxvGHY80CsytuFto
+1rgZrJuW3KZ15Qq336ysD9MKC7nCvWgRd6XYsCHQoQPXMc/ID9YHwzBSNObk
+OBxb1wu5dzzkroiUJywM6NEDCAkp/jiTmTOBevW4gQAA8OwZd5f6hXuP4X5q
+FJ7Pfl7l/X7z1zfQ/UIXi7sXf/HZqVPcvnv0AJ4/5/quEhO5wq2qyhU9JfbP
+ZKlifTAMI6devI5GM1UzhSsuANCqFdfkNH06cPEidwUGcKOxTp7kisp7LVty
+d6Znx1ojNjMWOYU5aKRa+csHoUiIk89OIsAjQDyNiLvn5MQJ7i2fly4BtrZc
+cWvdGmjalBuq6+HBiou8Y388ckrR23E/1/zRGVEw16zFt4aVoqr5Fy7kmsN8
+fLjPRNw9JUuXcjdlfmzgQOCfq/VgpW2Fp6+rNib437h/ofuFLiy1LQEAaWmA
+sbE/evXiBhT4+3NNYDwel+PpUyAigiuCDRqUvW1ZUfTffWliVzAMIyW5hbl4
+W5gGa0N9WUepMlVVYN8+7h6dCxeAtm25Jqnp04sv26kTd5XRbhw3kszOwK5C
++ygUFuJC+AWoKqvC57EPRrUaJZ63dSt3JeXn9+EK6mMmJlU8MEYmWB8Mw0jJ
+szfP0OW3IfihYbhC3W1dkowM4PBh7g7/1au5u9g/9fw5NzBgls8viEqPwm8D
+Sn5Q5qe8H3pj1Y1VsGpqheyCbBwYegDGGsbIzATMzbnH1vDLfo4lU4NYHwzD
+yKHojGioZpvCrIzX3yoKDQ3uKcRlPYnYwgJ49Qrgf9EOp5+drvC2Dz0+hHW9
+12Fkq5ES03/7DRgwgBWXuoT1wcgpRW/H/RzzJ7xNgFBgBDMz6eeprNr4/pWV
+gTZtgPqpDniW+qzcVy4D3Hf0MOUhBloOlJielcU1jy1e/Hn+7tRVrMAwjJQk
+ZSUjK0VXLgpMbbG1BV48aYyxbcbi9+Dfy13+8OPDGNFyhMQTAgCu38fZGbCy
+qqmkjCywPhiGkZKJp6bDd2tb5ATMLLGDui7avRu4exdYuOEFuu3vhrh5ccWK
+x3tEhDa72mDXV7vQzbibxLz27YHNm7kiw8iWNM+d7AqGYaQk6k0y9NT0Ppvi
+AnCF4eFDwKqpFdrrtceJ0BMAuMe/FAoLJZZ9mPIQ2YXZ6GLURWL6kyfco16c
+nGorNVNbWIGRU4rejvs55k/MTIaxlp70w1RBbX3/NjbcaLKCAmB259nYHrQd
+fz77E+1+bwedTTqYd2ke7sTfwe/Bv2PahWkY13YclHiSp51Dh7h30tTG+1Rq
+g6LnlyZWYBhGSgT5KTBpKh8FprY0asTdm/LsGTDAYgAEuQIsD1iOtb3W4v60
++2io2hCe5zxxO/425jvOx+Juko+DEQq54dDjxskmP1PDynun8sSJE6l58+Zk
+Y2MjnrZs2TIyMDAgW1tbsrW1pb/++ks8b82aNcTn88nKyoouX74snh4cHEw2
+NjbE5/Pp22+/FU/Py8ujUaNGEZ/PJ3t7e4qJiRHP8/b2JgsLC7KwsKADBw6I
+p0dFRZGdnR3x+Xxyc3OjghJeul2BQ2MYqRGJRKS8rB6tWpsn6yi1bvRoIm9v
+7ueM3AwSioQVXvfKFaKOHWsoGFMl0jx3lnsFM3HiRFy6dEliGo/Hw/z58/Hg
+wQM8ePAA/fv3BwCEhYXh2LFjCAsLw6VLlzBz5kxxZ9GMGTPg5eWFiIgIRERE
+iLfp5eUFbW1tREREYN68eVj434sy0tLSsGLFCgQFBSEoKAjLly9HZmYmAGDh
+woVYsGABIiIioKmpCS8vL2nVW4apEkGuAMqixjAyqC/rKLXufT8MAKg3UC/W
+BPapzExg1Spg7VruJk529VJ3lVtgunXrBs0S3gtKJYwyOHv2LEaPHg1VVVWY
+mJiAz+fj7t27SE5ORlZWFuzsuEdJjB8/HmfOnAEAnDt3DhMmTAAAjBgxAteu
+XQMAXL58GX369IGGhgY0NDTg4uICPz8/EBGuX7+OkSO5m7QmTJgg3lZdoujt
+uJ9b/uSsZKjk6UFfTp4SU5vfv60t9wroivrjD+DyZa7QdO4M/PfXX+xz+92p
+y6p8J//27dtx8OBBdOrUCZs3b4aGhgaSkpLg4OAgXsbQ0BCJiYlQVVWFoeGH
+N94ZGBggMTERAJCYmIgWLVpwYVRUoK6uDoFAgKSkJIl13m8rLS0NGhoaUPqv
+R/DjbTGMrCS/Sway5KfA1CYHB24kWEICYFjOiy2JgD17uPfOfPllrcRjZKhK
+nfwzZsxAdHQ0Hj58CD09PSxYsEDauUrE+4zGfzop+JjNzy1/yrsUFKTJT4Gp
+ze9fTY0bBbZ7d/nLBgRw75VxdCx9mc/td6cuq9IVTPPmzcU/T548GYMGDQLA
+XU3Ex8eL5yUkJMDQ0BAGBgZISEgoNv39OnFxcdDX10dRUREyMzOhra0NAwMD
+iUvN+Ph4ODs7Q0tLCxkZGRCJRFBSUkJCQgIMDAxKzOnh4QGT/x6/qqGhAVtb
+W/Ef/vtts8/sszQ+X//7X4hiCtGkCeQiT21/7tzZH3PnAkuWOKF+/dKX37PH
+CVOmAAEB8pX/c/7s7+8P7/9eZWoi7cdVV2QkQHR0tMQosqSkJPHPv/zyC40e
+PZqIiEJDQ6ldu3aUn59PUVFRZGZmRiKRiIiI7OzsKDAwkEQiEfXv35/8/PyI
+iGjHjh00ffp0IiI6evQoubm5ERGRQCAgU1NTSk9Pp7S0NPHPRESurq7k6+tL
+RETTpk2jXbt2FctcwUOTW9evX5d1hGr53PKPPzKHtAdtrpkwVSCL79/Fhejg
+wdLnp6YSqasTCQRlb+dz+92RN9I8d5Z7BTN69GgEBAQgNTUVLVq0wPLly+Hv
+74+HDx+Cx+PB1NQUu/+7Nm7VqhVGjRqFVq1aQUVFBTt37hQ3a+3cuRMeHh7I
+zc3FgAED0K9fPwCAp6cnxo0bBwsLC2hra8PX1xcAoKWlhaVLl6Jz584AgGXL
+lkFDQwMAsH79eri7u2PJkiXo0KEDPD09pVt1GaaS4tKT0ayBvaxjyNQ333Cj
+wzp2BI4e5R75P2YMYG/P9c9s2MA93l9LS9ZJmdrCnkXGMFJgvb479MNX4B8v
+J1lHkRmhkHtYZV4e4OYGaGpyd+mnpXHzXVyA5cu5x/wz8ou9D4Zh5ExqfjIc
+5eQxMbKirMwNV/7iiw+PfVm8mHv1cYsW3Hzm88IeFSOn3nfCKaq6mp+ISvzX
+3VtRCvg68lNgZPX9N2nyobgA3GuPTUwqV1zq6u/O54gVGIaphOkXpmPp9aUS
+094VvIOIhDDVV5NRKoaRT6wPhmEq6G7CXQw6OggiEiFuXhwaqTYCAEQIItB2
+Qz9cGhCJHj1kHJJhqom9D4ZhapmIRPjG7xus7L4JnfUc4PvUVzwv+V0y6J0e
+Srkdi2E+W6zAyClFb8eta/kPPjoIJZ4SfBeNhTBwFnbc2yH+V15SVjIK0/Sg
+Jz9dMAr9/StydkDx80sTKzAMUwHL/JdhgNIWvEpRQtCRvkjPycTdxLsAgKjX
+yVDJ1UPjxjIOyTByhvXBMEw5Xme/huV2KzTanoZTJ3nYtAngfbkZKsb3cHTE
+UUw5tgjnTqjj9alFso7KMNXG+mAYphY9ff0UX2S3Qf9+PDg6AlOnAhHHPfFC
+8AK9D/VGcHIQmjbQlXVMhpE7rMDIKUVvx61L+R+lPMGrJzZYs4b77OICZL7S
+wO6O9zDUaijCs0LQorGZbIKWQpG/f0XODih+fmlid/IzTDluRTyBRkFH6Ohw
+n5WUAE9PYL+XCnbt+gYZ16bhnZaqbEMyjBxifTAMUw7+ensYhm6G/8Gu4mlJ
+SUCHDsC33wKJidwzuL79VoYhGUZKWB8Mw9QSEYkQlxuKLhY2EtP19YF79wA/
+P+5FW/LyojGGkSeswMgpRW/HrSv5o9OjoVygBcf2GsWWadECuH4d2LIF6N69
+lgOWQ5G/f0XODih+fmlifTAMU4Ynr59ClNIGtrYlz1dRAWbPrt1MDKMoWB8M
+w5Rh4cVV2Lb7HXLOrsN/785jmDqN9cEwTC25E/UEZo1tWHFhmCpgBUZOKXo7
+bkXyp6bWfI6qep//edoTdGzRRrZhqkCRf38UOTug+PmliRUYRiYePgT09ICD
+B2WdpHT5RflIE0WjZxtrWUdhGIXE+mCYGhMRAaxeDezcCTRq9GG6UAg4OgLO
+zsC+fcDp00DXrqVvR1YepjyE/foxCPEMhY1N+cszTF3A+mAYuZeTA4wYAYSE
+AB4egEj0Yd7OnUDDhsDatdwVjKsrEBUls6iluvjsbwhjHWFlJeskDKOYWIGR
+U4rcjksEDB3qj3btuJsR4+OBFSsAgQD46y/u5927ufe19+sHLF4MDBoEZGbK
+OvkH169fxx/Be8HPmghVBXwKjCL//ihydkDx80sTKzCM1B06xDWP/f470KAB
+cOYMd6Viagps2AD88gtg/VG3xuzZgJMT4O4OFBVx07KyZBJd7Onrp8jKAoZ1
+/lK2QRhGgbE+GEaqiIC2bYGtW7k+lvcKCwFlZe5BkSUpKgIGDOCWe/UKePEC
+2LYNmDWrdnJ/atzJiTi1uxWe7f0exsayycAwsiDNcycrMIxUBQYC48YB4eGo
+9L0jGRnA0aNA585A48ZAt27AnTuAhUXNZC3N2/y30FtvjK6PnuPyKZ3a3TnD
+yBjr5P8MKFI77se/i3v2AJMnAwEB/pXejoYGMGMG0KkT0LIl8L//ARMmcKPO
+apPv02Pg3bPB/KmKW1wU6ffnU4qcHVD8/NLECgxTLadOAa1aAcnJwNu33JDj
+CROks+3Zs7k+nI0bpbO9ihCRCBv8t6N+7CC4uNTefhmmLmJNZEy1DBzIDUlO
+TgbGjAHu3+eKjLTExXFNZufOAfb20ttuaY49PYaZh37FomZ38N137PkwzOeH
+NZExckEgAG7eBM6eBdzcgKVLgSlTKrZuWm4aBhwegD+f/Vni/NiMWBQIC2Bk
+BOzaBYwe/WEY85s3QH6+lA7iI0WiIvxwaRlwfQWmT2fFhWGqixUYOaUI7bgn
+T3L3saipAcuWAdeuAX37cvPKyk9EmHxuMhrXa4xF1xZhqO9Q3Im/g9zCXLzO
+fg3Ps55otbMVuuzrgghBBIYP5/YzfDjQqxf3iJnly6V/PIcfH0F6fDNsmuGC
+4ODS8ysCRfj9KY0iZwcUP780sQLDVNmRI8DXX3M/83jcsORPhyGXdKm9K3gX
+YjNj4TPMB4+mP0In/U6Y9dcsaG/QhsV2C2g21ETS/CR4tPPAl/u+xPHQ49i8
+mXu8zKxZwIMH3GCCnJzqH4Nf+FW4HZ2ABZcX4LuL/4Pei5WYMIFdvTCMNLA+
+GKZK4uMBW1vu3fT165e8zOWXl+F+yh2T20/Ggi8XoFBYiPPh57HMfxluT7oN
+C23J8cf5RfnIKshC00ZNxdMepTyCyyEXnBx1Et2Nu4OIsP/hfhxY1wFjetli
+6tSqH4MgJw0Gq1tDePN7aGkLkZPRBJdWTUOXLlXfJsMoOnYfTAWwAlOzNm7k
+bobcu7fk+a/evUL73e2xqc8mBCYEwvuhN+op10M/fj9M6zgN3Yy7VXhfVyKv
+YMKZCbg+4TrW31qPC+EXYFyvPXJ2X0FoaOXvt3mv60ZPhD9tjLjd2xAWBiQm
+co+sYZjPmVTPnVRHKfqhXb9+XdYRSvX6NZG+PtGdOyXPF4qE1PmnzrT42mLx
+tLd5b6lIWFTlfW4L3EbKy5Vp5PGRlJaTRgabDci86326fLlq2zt65zopLWhB
+d0Leljhfnr//ilDk/IqcnUjx80vz3KkinTLFfC6IgIkTubv1HRxKXmZPyB5k
+F2RjWY9l4mlq9dWqtd/ZdrPRSb8THAwdwOPxMNdhLk4UbYSHxxE0acI9u+z8
+eaBDh/K3Ff36DSb+ORljtLbDoUP1cjEMUzrWRMZUyrZtgI8PcOsWSn3KsMNe
+B6zsuRIu5jV3p+Lb/Lcw3WqK3R2D0UrPFGfOAI8eAceOSS4nEADPngFGRtx/
+kfFZaPuLM/i8vri/cRWUlWssIsMopFq9D2bSpEnQ0dFBmzYfXhublpYGFxcX
+WFpaok+fPsjIyBDPW7t2LSwsLGBtbY0rV66Ip4eEhKBNmzawsLDAnDlzxNPz
+8/Ph5uYGCwsLODg4IDY2VjzvwIEDsLS0hKWlJQ5+9OrD6Oho2Nvbw8LCAu7u
+7igsLKz6N8BUWFwc96j9o0dLLy6JbxMRLgiHk4lTjWZpUr8JpnSYgp0Jnlge
+5obT2va4dD8UMTHc/JcvASNjgoljCNx+XwrrWT/BePAB2KwaDmuN9niwaSUr
+LgxTw8otMBMnTsSlS5ckpq1btw4uLi4IDw9Hr169sG7dOgBAWFgYjh07hrCw
+MFy6dAkzZ84UV8IZM2bAy8sLERERiIiIEG/Ty8sL2traiIiIwLx587Bw4UIA
+XBFbsWIFgoKCEBQUhOXLlyPzvzvtFi5ciAULFiAiIgKamprw8vKS3jciJ+Rx
+LP327dxjYMzNS1/mzPMz+MryK9y6eavG8yxwXABHQ0cMshwEF3Nn6Lj/D1u3
+cjdhDh+fjLzJVtD9xh1jJxTgh/kNYDXgKvp1aIW7S3dCSanskQHy+P1XhiLn
+V+TsgOLnl6qKdNRER0eTjY2N+LOVlRWlpKQQEVFycjJZWVkREdGaNWto3bp1
+4uX69u1Ld+7coaSkJLK2thZPP3r0KE2bNk28TGBgIBERFRYWUtOmTYmI6MiR
+IzR9+nTxOtOmTaOjR4+SSCSipk2bklAoJCKiO3fuUN++fYtlruChyS156yh8
++5ZIS4soJkZyulAkJEGOQPy514FedDrsdK3nzy7IpuYb9EjN8j5NmkSkP3c4
+Lbz6I4lEoiptT96+/8pS5PyKnJ1I8fNL89xZpRstX716BR0d7kmzOjo6ePXq
+FQAgKSkJhoaG4uUMDQ2RmJhYbLqBgQESExMBAImJiWjRogUAQEVFBerq6hAI
+BKVuKy0tDRoaGlD6746+j7dVlzg5Ock6goR9+7i76D99N8qBhwfQemdrJGUl
+IS03DfeS7qEvv2+t52+k2giLu/8I9cE/41zEKTQ2DcPPTsvAq+IYZnn7/itL
+kfMrcnZA8fNLU7Xv5OfxeFX+S1yVfTG1TyjkXiA2f37xeWdenIG5pjlGHB+B
+U2Gn4GzqjEaqjWo/JICpHadCqBOCogFT4T3MCw1UGsgkB8MwnCoNU9bR0UFK
+Sgp0dXWRnJyM5s2bA+CuJuLj48XLJSQkwNDQEAYGBkhISCg2/f06cXFx0NfX
+R1FRETIzM6GtrQ0DAwOJtsz4+Hg4OztDS0sLGRkZEIlEUFJSQkJCAgwMDErM
+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
+pZKl1qikYXgpuaiYJZqax1Q4EAn85Bq35/fHjpNWmsg57LPp+1rLtTyHvff5
+nLN4+J7nefZ+NmGeYXrHEkIYXLOHyH4+Vvfhhx8ya9YsAGbNmsWOHTsA2Llz
+J9OmTcPFxQVfX1/8/PzIzMzEbDZTVlZm6QE9/vjjln2uP1ZMTAxpaWkAfPzx
+x4wdOxY3Nzfc3NyIjIy0FKXWYtSoUS32Wjk5MOTHayrPXj2LdydvOrXt1Kxj
+tmR+W5D8+jFydjB+fmtqdg9mzJgxhIeH8/bb2oRwYWEhnp6eAHh6elJYWAhA
+fn4+Pj4/rWvl4+NDXl7eL5739vYmLy8PgLy8PHr31hZadHZ2pkuXLly9evWm
+xxJ3Jifnp+Gxfd/sY+RdI/UNJIRoFZybs/Nnn31Gz549KSoqIjIykqCgoBt+
+7uDgoOvtdmfPno2vry8Abm5uDB482PLtonGc1F4f/+tf/2qxvDk5cP/96aSn
+Q4ophcUjFxsqvy0eS379Hl8/h2EPeVp7/vT0dN555x0Ay99Lq1FWEh8fr9as
+WaMCAwOV2WxWSimVn5+vAgMDlVJKrVy5Uq1cudKyfVRUlMrIyFBms1kFBQVZ
+nt+yZYtasGCBZZsjR44opZSqra1V3bp1U0optXXrVjV//nzLPvPmzVPJyck3
+5LHiW9PFp59+2iKv09CgVI8eSl2+rJS5zKzcVrmp6trqZh+3pfLbiuTXj5Gz
+K2X8/Nb823nHQ2SVlZWUlZUBUFFRwd69exk4cCATJ05k06ZNgHam12OPPQbA
+xIkTSU5OpqamBpPJxLlz54iIiMDLy4vOnTuTmZmJUorNmzfz6KOPWvZpPNa2
+bdt46KGHABg7dix79+6ltLSUkpIS9u3bR1RU1J2+FbvU+E3D1sxm7Swyb2/Y
+cWYH4/zG0da5bbOP21L5bUXy68fI2cH4+a3pjofICgsLmTRpEgB1dXVMnz6d
+sWPHEh4ezpQpU9iwYQO+vr68//77AAQHBzNlyhSCg4NxdnZm/fr1luGz9evX
+M3v2bKqqqhg/fjzR0dEAxMbGMnPmTPz9/fHw8CA5ORkAd3d3nn/+eYYNGwbA
+8uXLcXNzu/NP4XescYLfwQFSTqewYOgCvSMJIVoJuZLfTqWnp7fIN6GXXoKy
+Mli8/Cr9EvphXmSmvUv7Zh+3pfLbiuTXj5Gzg/Hzy5X8wmoaezA7v95JZL9I
+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
+" /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">20</span><span style=" color:#000080;">]:</span> def add_prop(group):</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     births = group.births.astype(float)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     group['prop'] = births/births.sum()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     return group</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span> </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">21</span><span style=" color:#000080;">]:</span> names = names.groupby(['year', 'sex']).apply(add_prop)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">22</span><span style=" color:#000080;">]:</span> names.info()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;class 'pandas.core.frame.DataFrame'&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Int64Index: 1690784 entries, 0 to 1690783</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Data columns (total 5 columns):</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">name      1690784 non-null object</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">sex       1690784 non-null object</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">births    1690784 non-null int64</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">year      1690784 non-null int64</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">prop      1690784 non-null float64</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dtypes: float64(1), int64(2), object(2)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">23</span><span style=" color:#000080;">]:</span> np.allclose(names.groupby(['year', 'sex']).prop.sum(), 1)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">---------------------------------------------------------------------------</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">NameError</span>                                 Traceback (most recent call last)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#006400;">&lt;ipython-input-23-83f252af9347&gt;</span> in <span style=" color:#4682b4;">&lt;module&gt;</span><span style=" color:#00008b;">()</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#006400;">----&gt; 1</span><span style=" color:#a52a2a;"> </span>np<span style=" color:#a52a2a;">.</span>allclose<span style=" color:#a52a2a;">(</span>names<span style=" color:#a52a2a;">.</span>groupby<span style=" color:#a52a2a;">([</span><span style=" color:#00008b;">'year'</span><span style=" color:#a52a2a;">,</span> <span style=" color:#00008b;">'sex'</span><span style=" color:#a52a2a;">]).</span>prop<span style=" color:#a52a2a;">.</span>sum<span style=" color:#a52a2a;">(),</span> <span style=" color:#4682b4;">1</span><span style=" color:#a52a2a;">)</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">NameError</span>: name 'np' is not defined</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">24</span><span style=" color:#000080;">]:</span> import numpy as np</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">25</span><span style=" color:#000080;">]:</span> np.allclose(names.groupby(['year', 'sex']).prop.sum(), 1)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">25</span><span style=" color:#8b0000;">]:</span> True</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">26</span><span style=" color:#000080;">]:</span> def get_top1000(group):</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span>     return group.sort_index(by='births', ascending=False)[:1000]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span> </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">27</span><span style=" color:#000080;">]:</span> grouped = names.groupby(['year', 'sex'])</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">28</span><span style=" color:#000080;">]:</span> top1000 = grouped.apply(get_top1000)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">29</span><span style=" color:#000080;">]:</span> </p></body></html>
